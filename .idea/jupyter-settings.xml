@@ -7,7 +7,7 @@
           <value>
             <JupyterConnectionParameters>
               <option name="managed" value="true" />
-              <option name="sdkName" value="eksploracja_danych" />
+              <option name="sdkName" value="eksploracja_danych_n" />
             </JupyterConnectionParameters>
           </value>
         </entry>
