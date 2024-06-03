@@ -1,12 +1,8 @@
 from transformers import pipeline
 
 BATCH_COUNT = 0
-BATCH_SIZE = 100
+BATCH_SIZE = 10
 sentiment_calculated = []
-BATCH_COUNT = BATCH_COUNT + 1
-BATCH_COUNT
-
-
 
 
 def run_model(twitter):
@@ -40,3 +36,8 @@ def run_model(twitter):
 
     create_tweet_list()
     calculate_sentiment_with_outside_model()
+    return sentiment_calculated
+
+def combine(original_data, sentiment):
+  original_data["outer_sentiment"] = sentiment
+  return original_data

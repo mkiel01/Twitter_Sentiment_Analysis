@@ -40,24 +40,30 @@ def assign_new_colum(data, name):
      data[name] = -1
      return data
 
-def calc_sentiment(data):
+def calc_sentiment(data_input):
     # Initialize counters
     neg = 0
     neut = 0
     pos = 0
 
-    # Loop through the DataFrame
-    for i in range(len(data)):
-        if data["sentiment"][i] == "0":
+    data = data_input.copy()
+   
+    for sentiment in data["outer_sentiment"]:
+        if sentiment == "0":
             neg += 1
-        elif data["sentiment"][i] == "2":
+        elif sentiment == "2":
             neut += 1
-        elif data["sentiment"][i] == "4":
+        elif sentiment == "4":
             pos += 1
 
     print(f"pos: {pos} \n")
     print(f"neut: {neut} \n")
     print(f"neg: {neg} \n")
+
+    
     return neg, neut, pos
+
+
+
 
             
